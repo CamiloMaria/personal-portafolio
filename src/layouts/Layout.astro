@@ -1,28 +1,44 @@
 ---
 interface Props {
-  title: string;
+	title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link href="https://fonts.cdnfonts.com/css/skia" rel="stylesheet" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body>
-    <slot />
-  </body>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link href="https://fonts.cdnfonts.com/css/skia" rel="stylesheet" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
 </html>
 <style is:global>
-  html {
-    font-family: "Skia", sans-serif;
-  }
+	html {
+		font-family: "Skia", sans-serif;
+		background: #fff;
+		letter-spacing: -0.025rem;
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	p {
+		color: #888;
+		font-size: 0.8rem;
+		line-height: 1.5;
+		margin: 0;
+		text-wrap: pretty;
+	}
 </style>
