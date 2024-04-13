@@ -1,134 +1,149 @@
 {
     "basics": {
-        "name": "John Doe",
-        "label": "Programmer",
-        "image": "",
-        "email": "john@gmail.com",
-        "phone": "(912) 555-4321",
-        "url": "https://johndoe.com",
-        "summary": "A summary of John Doe…",
+        "name": "Camilo José María Castillo",
+        "label": "Ingeniero de Software Full Stack",
+        "image": "https://avatars.githubusercontent.com/CamiloMaria",
+        "email": "camilo_jose08@hotmail.com",
+        "phone": "+1 (809) 602-8624",
+        "url": "https://linkedin.com/in/camilo-maría-castillo-8a5046222/",
+        "summary": "Soy un Ingeniero de Software Full Stack con más de 2 años de experiencia en desarrollo, implementación y mantenimiento de soluciones tecnológicas. Graduado de INTEC, especializado en administración de bases de datos y desarrollo full stack.",
         "location": {
-            "address": "2712 Broadway St",
-            "postalCode": "CA 94115",
-            "city": "San Francisco",
-            "countryCode": "US",
-            "region": "California"
+            "address": "Bella Vista, 10112",
+            "postalCode": "",
+            "city": "Santo Domingo",
+            "countryCode": "DO",
+            "region": "D.N"
         },
         "profiles": [
             {
-                "network": "Twitter",
-                "username": "john",
-                "url": "https://twitter.com/john"
+                "network": "LinkedIn",
+                "username": "camilo-maría-castillo-8a5046222",
+                "url": "https://linkedin.com/in/camilo-maría-castillo-8a5046222/"
+            },
+            {
+                "network": "GitHub",
+                "username": "CamiloMaria",
+                "url": "https://github.com/CamiloMaria"
             }
         ]
     },
     "work": [
         {
-            "name": "Company",
-            "position": "President",
-            "url": "https://company.com",
-            "startDate": "2013-01-01",
-            "endDate": "2014-01-01",
-            "summary": "Description…",
+            "name": "C&C Technology Supply, LLC",
+            "position": "Database Administrator",
+            "url": "",
+            "startDate": "2020-01-01",
+            "endDate": "2022-01-01",
+            "summary": "Almacenar y organizar datos, identificar necesidades de usuarios, garantizar el funcionamiento eficiente de la base de datos y automatizar tareas con Stored Procedures.",
             "highlights": [
-                "Started the company"
+                "Automatización de tareas para agilizar procesos",
+                "Mantenimiento y actualización de permisos de base de datos"
             ]
-        }
-    ],
-    "volunteer": [
+        },
         {
-            "organization": "Organization",
-            "position": "Volunteer",
-            "url": "https://organization.com/",
-            "startDate": "2012-01-01",
-            "endDate": "2013-01-01",
-            "summary": "Description…",
+            "name": "Plaza Lama",
+            "position": "Desarrollador Full Stack",
+            "url": "",
+            "startDate": "2023-01-01",
+            "endDate": "",
+            "summary": "Diseño y desarrollo de soluciones para mejorar la eficiencia operativa, integración y creación de nuevas funcionalidades utilizando tecnologías modernas y buenas prácticas.",
             "highlights": [
-                "Awarded 'Volunteer of the Month'"
+                "Liderazgo en el desarrollo y optimización de aplicaciones",
+                "Colaboración en la creación de aplicaciones móviles y servicios internos"
             ]
         }
     ],
     "education": [
         {
-            "institution": "University",
-            "url": "https://institution.com/",
-            "area": "Software Development",
+            "institution": "Instituto Tecnológico de Santo Domingo",
+            "url": "",
+            "area": "Ingeniería de Software",
             "studyType": "Bachelor",
-            "startDate": "2011-01-01",
-            "endDate": "2013-01-01",
-            "score": "4.0",
-            "courses": [
-                "DB1101 - Basic SQL"
-            ]
-        }
-    ],
-    "awards": [
-        {
-            "title": "Award",
-            "date": "2014-11-01",
-            "awarder": "Company",
-            "summary": "There is no spoon."
+            "startDate": "2020-01-01",
+            "endDate": "2024-04-01",
+            "score": "",
+            "courses": []
         }
     ],
     "certificates": [
         {
-            "name": "Certificate",
-            "date": "2021-11-07",
-            "issuer": "Company",
-            "url": "https://certificate.com"
-        }
-    ],
-    "publications": [
+            "name": "Microsoft 365 Certified",
+            "date": "2020-01-01",
+            "issuer": "Colegio Dominicano de La Salle",
+            "url": ""
+        },
         {
-            "name": "Publication",
-            "publisher": "Company",
-            "releaseDate": "2014-10-01",
-            "url": "https://publication.com",
-            "summary": "Description…"
+            "name": "Software Process Certification",
+            "date": "2021-01-01",
+            "issuer": "",
+            "url": ""
+        },
+        {
+            "name": "Programming Essentials in Python Certification",
+            "date": "2021-01-01",
+            "issuer": "CISCO",
+            "url": ""
+        },
+        {
+            "name": "Certificate of completion: Evaluador de Indicadores Clave (KPI)",
+            "date": "2022-01-01",
+            "issuer": "",
+            "url": ""
+        },
+        {
+            "name": "Scientific Computing with Python",
+            "date": "2022-01-01",
+            "issuer": "FreeCodeCamp",
+            "url": ""
+        },
+        {
+            "name": "Aplicaciones Web PHP y MySQL",
+            "date": "2022-01-01",
+            "issuer": "SDQ",
+            "url": ""
         }
     ],
     "skills": [
         {
-            "name": "Web Development",
-            "level": "Master",
+            "name": "Software Development",
+            "level": "Advanced",
             "keywords": [
+                "JavaScript",
+                "TypeScript",
+                "NestJS",
+                "Angular",
+                "React",
+                ".Net Core",
+                "Node.js",
+                "C++",
+                "C#",
+                "Python",
                 "HTML",
                 "CSS",
-                "JavaScript"
+                "GitFlow",
+                "ASP.NET",
+                "MVC",
+                "Unity",
+                "Linux",
+                "Azure DevOps",
+                "Git",
+                "GitHub",
+                "GitLab",
+                "Jira",
+                "Ionic",
+                "React Native",
+                "Flutter"
             ]
         }
     ],
     "languages": [
         {
-            "language": "English",
+            "language": "Spanish",
             "fluency": "Native speaker"
-        }
-    ],
-    "interests": [
+        },
         {
-            "name": "Wildlife",
-            "keywords": [
-                "Ferrets",
-                "Unicorns"
-            ]
-        }
-    ],
-    "references": [
-        {
-            "name": "Jane Doe",
-            "reference": "Reference…"
-        }
-    ],
-    "projects": [
-        {
-            "name": "Project",
-            "startDate": "2019-01-01",
-            "endDate": "2021-01-01",
-            "description": "Description...",
-            "highlights": [
-                "Won award at AIHacks 2016"
-            ],
-            "url": "https://project.com/"
+            "language": "English",
+            "fluency": "Upper Intermediate"
         }
     ]
 }
