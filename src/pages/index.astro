@@ -1,10 +1,16 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import { About, Education, Experience, Hero, Projects, Skills } from "@/components"
+import Layout from "@layouts/Layout.astro"
 ---
 
 <Layout title="Portafolio.">
 	<main>
-		<h1>Hola, soy un portafolio.</h1>
+		<Hero />
+		<About />
+		<Experience />
+		<Education />
+		<Projects />
+		<Skills />
 	</main>
 </Layout>
 
