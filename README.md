@@ -1,5 +1,8 @@
 # Astro Starter Kit: Basics
 
+Schema del JSON CV basado en:
+https://jsonresume.org/schema/
+
 ```sh
 npm create astro@latest -- --template basics
 ```

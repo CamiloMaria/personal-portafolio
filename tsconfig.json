@@ -5,8 +5,12 @@
     "paths": {
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
+      "@sections/*": ["src/sections/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@pages/*": ["src/pages/*"]
+      "@pages/*": ["src/pages/*"],
+      "@cv-es": ["./cv-es.json"],
+      "@cv-en": ["./cv-en.json"],
+      "@icons/*": ["src/icons/*"]
     }
   }
 }
