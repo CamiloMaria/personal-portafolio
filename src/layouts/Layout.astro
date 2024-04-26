@@ -13,7 +13,10 @@ const { title } = Astro.props
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link href="https://fonts.cdnfonts.com/css/skia" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -23,7 +26,7 @@ const { title } = Astro.props
 </html>
 <style is:global>
 	html {
-		font-family: "Skia", sans-serif;
+		font-family: "Inter", sans-serif;
 		background: #fff;
 		letter-spacing: -0.025rem;
 	}
