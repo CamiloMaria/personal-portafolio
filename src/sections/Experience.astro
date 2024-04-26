@@ -1,5 +1,24 @@
 ---
 import { Section } from "@/components"
+import { work } from "@cv-es"
 ---
 
-<Section title="Experiencia" />
+<Section id="experiencia" title="Experiencia">
+	{
+		work.map((job, index) => (
+			<div class="mb-5 rounded-lg bg-gray-100 p-5 shadow-md">
+				<h3 class="text-xl font-bold text-gray-800">{job.position}</h3>
+				<p class="text-sm text-gray-600">{job.name}</p>
+				<p class="text-sm text-gray-600">
+					{job.startDate} - {job.endDate || "Actualidad"}
+				</p>
+				<p class="text-sm text-gray-600">{job.summary}</p>
+				<ul class="list-inside list-disc pl-5">
+					{job.highlights.map((desc, index) => (
+						<li class="text-sm font-medium">{desc}</li>
+					))}
+				</ul>
+			</div>
+		))
+	}
+</Section>

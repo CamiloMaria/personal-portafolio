@@ -1,12 +1,13 @@
 ---
 interface Props {
+	id: string
 	title?: string
 }
 
-const { title } = Astro.props
+const { title, id } = Astro.props
 ---
 
-<section class="mx-auto mb-[72px] mt-0 max-w-[700px]">
+<section id={id} data-section={id} class="mx-auto mb-[72px] mt-0 max-w-[700px]">
 	{title && <h2 class=" text-2xl; mb-2 font-bold leading-normal">{title}</h2>}
 	<slot />
 </section>

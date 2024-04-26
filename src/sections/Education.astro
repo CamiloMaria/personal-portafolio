@@ -1,5 +1,24 @@
 ---
 import { Section } from "@/components"
+import { education as educationData } from "@cv-es"
 ---
 
-<Section title="Educacion" />
+<Section title="Educacion">
+	{
+		educationData.map(({ institution, area, startDate, endDate, studyType, courses }, index) => (
+			<div class="mb-5 rounded-lg bg-gray-100 p-5 shadow-md">
+				<h3 class="text-xl font-bold text-gray-800">{institution}</h3>
+				<p class="text-sm text-gray-600">{area}</p>
+				<p class="text-sm text-gray-600">
+					{startDate} - {endDate || "Actualidad"}
+				</p>
+				<p class="text-sm text-gray-600">{studyType}</p>
+				<ul class="list-inside list-disc pl-5">
+					{courses.map((desc, index) => (
+						<li class="text-sm font-medium">{desc}</li>
+					))}
+				</ul>
+			</div>
+		))
+	}
+</Section>
