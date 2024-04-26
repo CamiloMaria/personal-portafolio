@@ -12,6 +12,160 @@ const SOCIAL_ICONS: Record<string, any> = {
 }
 ---
 
+<section id="profile">
+	<div class="section__pic-container">
+		<img src={image} alt="Profile photo" />
+	</div>
+	<div class="section__text">
+		<p class="section__text__p1 text-lg">Hola, Soy</p>
+		<h1 class="title">{name}</h1>
+		<p class="section__text__p2 font-bold text-[rgb(85,85,85)] dark:text-[rgb(218,218,218)]">
+			{label}
+		</p>
+		<div class="btn-container">
+			<button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
+				Descargar CV
+			</button>
+			<button class="btn btn-color-1" onclick="location.href='./#contact'"> Contact Info </button>
+		</div>
+		<div id="socials-container">
+			{
+				profiles.map(({ network, url }) => {
+					const Icon = SOCIAL_ICONS[network]
+
+					if (Icon) {
+						return (
+							<a href={url} title={`Visitar mi perfil en ${network}`} target="_blank" class="icon">
+								<Icon />
+							</a>
+						)
+					}
+				})
+			}
+		</div>
+	</div>
+</section>
+
+<style>
+	/* SECTIONS */
+	section {
+		padding-top: 4vh;
+		height: 96vh;
+		margin: 0 10rem;
+		box-sizing: border-box;
+		min-height: fit-content;
+	}
+
+	.section-container {
+		display: flex;
+	}
+
+	/* PROFILE SECTION */
+
+	#profile {
+		display: flex;
+		justify-content: center;
+		height: 80vh;
+	}
+
+	.section__pic-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.section__pic-container img {
+		width: 85%;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+
+	.section__text {
+		align-self: center;
+		text-align: center;
+	}
+
+	.section__text p {
+		font-weight: 600;
+	}
+
+	.section__text__p1 {
+		text-align: center;
+	}
+
+	.section__text__p2 {
+		font-size: 1.45rem;
+		margin-bottom: 1rem;
+	}
+
+	.title {
+		font-size: 3rem;
+		text-align: center;
+	}
+
+	#socials-container {
+		display: flex;
+		justify-content: center;
+		margin-top: 1rem;
+		gap: 1rem;
+	}
+
+	/* ICONS */
+
+	.icon {
+		cursor: pointer;
+		height: 2rem;
+	}
+
+	/* BUTTONS */
+
+	.btn-container {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	.btn {
+		font-weight: 600;
+		font-size: 13px;
+		transition: all 300ms ease;
+		padding: 1rem;
+		width: 8rem;
+		border-radius: 2rem;
+	}
+
+	.btn-color-1,
+	.btn-color-2 {
+		border: rgb(53, 53, 53) 0.1rem solid;
+	}
+
+	.btn-color-1:hover,
+	.btn-color-2:hover {
+		cursor: pointer;
+	}
+
+	.btn-color-1,
+	.btn-color-2:hover {
+		background: rgb(53, 53, 53);
+		color: white;
+	}
+
+	.btn-color-1:hover {
+		background: rgb(0, 0, 0);
+	}
+
+	.btn-color-2 {
+		/* background: rgb(255, 255, 255); */
+	}
+
+	.btn-color-2:hover {
+		border: rgb(255, 255, 255) 0.1rem solid;
+	}
+
+	.btn-container {
+		gap: 1rem;
+	}
+</style>
+<!-- 
 <Section>
 	<div>
 		<div>
@@ -71,4 +225,4 @@ const SOCIAL_ICONS: Record<string, any> = {
 			</figure>
 		</div>
 	</div>
-</Section>
+</Section> -->
