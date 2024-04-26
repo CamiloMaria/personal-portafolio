@@ -1,6 +1,5 @@
 ---
-import { Section } from "@/components"
-import { GithubIcon, LinkedinIcon, MailIcon, PhoneIcon } from "@/icons"
+import { GithubIcon, LinkedinIcon } from "@/icons"
 import { basics } from "@cv-es"
 
 const { name, label, location, image, email, phone, profiles } = basics
@@ -54,6 +53,7 @@ const SOCIAL_ICONS: Record<string, any> = {
 		margin: 0 10rem;
 		box-sizing: border-box;
 		min-height: fit-content;
+		margin-bottom: 6rem;
 	}
 
 	.section-container {
@@ -164,65 +164,108 @@ const SOCIAL_ICONS: Record<string, any> = {
 	.btn-container {
 		gap: 1rem;
 	}
-</style>
-<!-- 
-<Section>
-	<div>
-		<div>
-			<h1 class="text-4xl font-bold">{name}</h1>
-			<h2 class="text-2xl font-medium">{label}</h2>
-			<span class="text-gray-700">
-				{city}, {region}
-			</span>
-			<footer class="">
-				<footer class="flex items-center space-x-2">
-					{
-						email && (
-							<a
-								href={`mailto:${email}`}
-								title={`Enviar un correo electrónico a ${email}`}
-								target="_blank"
-								class="text-gray-500 hover:text-gray-700"
-							>
-								<MailIcon />
-							</a>
-						)
-					}
-					{
-						phone && (
-							<a
-								href={`tel:${phone}`}
-								title={`Llamar por teléfono al número ${phone}`}
-								target="_blank"
-								class="text-gray-500 hover:text-gray-700"
-							>
-								<PhoneIcon />
-							</a>
-						)
-					}
-					{
-						profiles.map(({ network, url }) => {
-							const Icon = SOCIAL_ICONS[network]
 
-							if (Icon) {
-								return (
-									<a
-										href={url}
-										title={`Visitar mi perfil en ${network}`}
-										target="_blank"
-										class="text-gray-500 hover:text-gray-700"
-									>
-										<Icon />
-									</a>
-								)
-							}
-						})
-					}
-				</footer>
-			</footer>
-			<figure>
-				<img src={image} alt={name} />
-			</figure>
-		</div>
-	</div>
-</Section> -->
+	@media screen and (max-width: 1400px) {
+		#profile {
+			height: 83vh;
+			margin-bottom: 6rem;
+		}
+		.about-containers {
+			flex-wrap: wrap;
+		}
+		#contact,
+		#projects {
+			height: fit-content;
+		}
+	}
+
+	@media screen and (max-width: 1200px) {
+		#desktop-nav {
+			display: none;
+		}
+		#hamburger-nav {
+			display: flex;
+		}
+		#experience,
+		.experience-details-container {
+			margin-top: 2rem;
+		}
+		#profile,
+		.section-container {
+			display: block;
+		}
+		.arrow {
+			display: none;
+		}
+		section,
+		.section-container {
+			height: fit-content;
+		}
+		section {
+			margin: 0 5%;
+		}
+		.section__pic-container {
+			width: 275px;
+			height: 275px;
+			margin: 0 auto 2rem;
+		}
+		.about-containers {
+			margin-top: 0;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		#contact,
+		footer {
+			height: 40vh;
+		}
+		#profile {
+			height: 83vh;
+			margin-bottom: 0;
+		}
+		article {
+			font-size: 1rem;
+		}
+		footer nav {
+			height: fit-content;
+			margin-bottom: 2rem;
+		}
+		.about-containers,
+		.contact-info-upper-container,
+		.btn-container {
+			flex-wrap: wrap;
+		}
+		.contact-info-container {
+			margin: 0;
+		}
+		.contact-info-container p,
+		.nav-links li a {
+			font-size: 1rem;
+		}
+		.experience-sub-title {
+			font-size: 1.25rem;
+		}
+		.logo {
+			font-size: 1.5rem;
+		}
+		.nav-links {
+			flex-direction: column;
+			gap: 0.5rem;
+			text-align: center;
+		}
+		.section__pic-container {
+			/* width: auto; */
+			height: 46vw;
+			justify-content: center;
+		}
+		.section__text__p2 {
+			font-size: 1.25rem;
+		}
+		.title {
+			font-size: 2rem;
+		}
+		.text-container {
+			text-align: justify;
+		}
+	}
+</style>
