@@ -75,6 +75,37 @@
             "courses": []
         }
     ],
+    "projects": [
+        {
+            "name": "IQS MeetMe",
+            "description": "Es una red social como Instagram para que las personas puedan interactuar entre sí y ver las publicaciones de los usuarios. (Aún en fase de desarrollo)",
+            "url": "https://meet-me-omega.vercel.app/",
+            "github": "https://github.com/CamiloMaria/MeetMe",
+            "image": "/projects/MeetMe.png",
+            "tags": [
+                "React",
+                "TypeScript",
+                "Vite"
+            ],
+            "highlights": [
+                "Desarrollo de API REST con .Net Core",
+                "Desarrollo de Frontend con Angular",
+                "Implementación de autenticación y autorización con JWT"
+            ]
+        },
+        {
+            "name": "2B Kitten Tower Defense",
+            "description": "El proyecto consiste en un videojuego de aplicación para dispositivos móviles, especificamente Android. Este proyecto contará con la fusión de los géneros defensa de torres y estrategias de cartas, con algunos elementos del juego de rol y fantasía/medieval. A su vez, cuenta con sistemas de servicios multijugador-asincrónicos.",
+            "url": "https://play.google.com/store/apps/details?id=com.CompaniaJevi.kittentowerdefense&pli=1",
+            "github": "",
+            "image": "/projects/2B-Kitten-Tower-Defense.png",
+            "tags": [
+                "Unity",
+                "CSharp"
+            ],
+            "highlights": []
+        }
+    ],
     "certificates": [
         {
             "name": "Microsoft 365 Certified",

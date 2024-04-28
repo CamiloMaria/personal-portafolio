@@ -1,5 +1,65 @@
 ---
-import { Section } from "@/components"
+import { LinkButton, Section } from "@/components"
+import { TAGS } from "@/consts/tags"
+import { CodeIcon, GithubIcon } from "@/icons"
+import Link from "@/icons/Link.astro"
+import { projects } from "@cv-es"
+
+const PROJECTS = projects.map((project) => ({
+	...project,
+	tags: project.tags.map((tag) => TAGS[tag.toUpperCase() as keyof typeof TAGS]).filter(Boolean),
+}))
 ---
 
-<Section id="proyectos" title="Proyectos" />
+<Section id="proyectos" title="Proyectos" icon={CodeIcon}>
+	<div class="flex flex-col gap-y-16">
+		{
+			PROJECTS.map(({ image, name, description, tags, url, github }) => (
+				<article class="group flex flex-col space-x-0 space-y-8 md:flex-row md:space-x-8 md:space-y-0">
+					<div class="w-full md:w-1/2">
+						<div class="relative col-span-6 row-span-5 flex transform flex-col items-center gap-8 overflow-clip rounded-xl shadow-xl transition duration-500 ease-in-out sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+							<img
+								alt="Recién llegado vs 5 años en Nueva Zelanda"
+								class="h-56 w-full object-cover object-top transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+								loading="lazy"
+								src={image}
+							/>
+						</div>
+					</div>
+
+					<div class="w-full md:w-1/2 md:max-w-lg">
+						<h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">{name}</h3>
+						<div class="mt-2 flex flex-wrap">
+							<ul class="mb-2 flex flex-row gap-x-2">
+								{tags.map((tag) => (
+									<li>
+										<span class={`flex gap-x-2 rounded-full text-xs ${tag.class} px-2 py-1 `}>
+											<tag.icon class="size-4" />
+											{tag.name}
+										</span>
+									</li>
+								))}
+							</ul>
+
+							<div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+							<footer class="mt-4 flex items-end justify-start gap-x-4">
+								{github && (
+									<LinkButton href={github}>
+										<GithubIcon class="size-6" />
+										Code
+									</LinkButton>
+								)}
+								{url && (
+									<LinkButton href={url}>
+										<Link class="size-8" />
+										Preview
+									</LinkButton>
+								)}
+							</footer>
+						</div>
+					</div>
+				</article>
+			))
+		}
+	</div>
+</Section>

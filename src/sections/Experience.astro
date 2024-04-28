@@ -1,11 +1,12 @@
 ---
 import { Section } from "@/components"
 import ExperienceItem from "@/components/ExperienceItem.astro"
+import { BriefCaseIcon } from "@/icons"
 import { work } from "@cv-es"
 ---
 
-<Section id="experiencia" title="Experiencia Profesional">
-	<ol class="relative mt-16">
+<Section id="experiencia" title="Experiencia Profesional" icon={BriefCaseIcon}>
+	<ol class="relative">
 		{
 			work.map((experiencie) => (
 				<li class="">
