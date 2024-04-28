@@ -1,12 +1,12 @@
 ---
 import { Section } from "@/components"
 import { EducationIcon, ExperienceIcon } from "@/icons"
-import { basics } from "@cv-es"
+import { basics, languages } from "@cv-es"
 
 const { summary } = basics
 ---
 
-<Section id="sobre-mi" title="Sobre Mí">
+<Section id="sobre-mi" title="Sobre Mí" className="relative pt-20">
 	<div class="about-details-container">
 		<div class="about-containers">
 			<div class="details-container bg-white dark:bg-gray-800">
@@ -16,8 +16,14 @@ const { summary } = basics
 			</div>
 			<div class="details-container bg-white dark:bg-gray-800">
 				<EducationIcon className="mb-2 h-8 cursor-pointer" />
-				<h3 class="font-bold">Education</h3>
-				<p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+				<h3 class="font-bold">Idiomas</h3>
+				{
+					languages.map(({ language, fluency }) => (
+						<p>
+							{language} - {fluency}
+						</p>
+					))
+				}
 			</div>
 		</div>
 		<div class="text-container">
@@ -30,11 +36,6 @@ const { summary } = basics
 
 <style>
 	/* ABOUT SECTION */
-
-	#about {
-		position: relative;
-	}
-
 	.about-containers {
 		gap: 2rem;
 		margin-bottom: 2rem;

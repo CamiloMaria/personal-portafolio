@@ -55,6 +55,16 @@
     ],
     "education": [
         {
+            "institution": "INTEC",
+            "url": "",
+            "area": "Ingeniería de Software",
+            "studyType": "Ingeniería",
+            "startDate": "2020-01-01",
+            "endDate": "2024-04-01",
+            "score": "",
+            "courses": []
+        },
+        {
             "institution": "Instituto Tecnológico de Santo Domingo",
             "url": "",
             "area": "Ingeniería de Software",
@@ -139,11 +149,11 @@
     "languages": [
         {
             "language": "Spanish",
-            "fluency": "Native speaker"
+            "fluency": "Lengua materna"
         },
         {
             "language": "English",
-            "fluency": "Upper Intermediate"
+            "fluency": "Intermedio alto"
         }
     ]
 }
