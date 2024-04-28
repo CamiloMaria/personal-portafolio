@@ -1,34 +1,17 @@
 ---
 import { Section } from "@/components"
+import ExperienceItem from "@/components/ExperienceItem.astro"
 import { work } from "@cv-es"
 ---
 
 <Section id="experiencia" title="Experiencia Profesional">
-	<div class="space-y-8">
+	<ol class="relative mt-16">
 		{
-			work.map((job) => (
-				<div class="group relative">
-					<div class="transform rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 p-6 shadow-xl transition duration-500 ease-in-out hover:-translate-y-2">
-						<div class="flex items-center justify-between text-white">
-							<h3 class="text-2xl font-bold">
-								{job.position} @ {job.name}
-							</h3>
-							<span class="text-sm">
-								{job.startDate} - {job.endDate || "Presente"}
-							</span>
-						</div>
-						<p class="mt-2">{job.summary}</p>
-					</div>
-					<div class="rotate-y-180 group-hover:rotate-y-0 absolute inset-0 transform rounded-lg bg-white p-6 shadow-lg transition duration-500 ease-in-out">
-						<h4 class="text-xl font-semibold text-gray-800">Logros</h4>
-						<ul class="mt-2 list-inside list-disc text-gray-600">
-							{job.highlights.map((highlight) => (
-								<li>{highlight}</li>
-							))}
-						</ul>
-					</div>
-				</div>
+			work.map((experiencie) => (
+				<li class="">
+					<ExperienceItem {...experiencie} />
+				</li>
 			))
 		}
-	</div>
+	</ol>
 </Section>
