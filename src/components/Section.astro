@@ -4,13 +4,25 @@ interface Props {
 	title?: string
 	container?: boolean
 	className?: string
+	icon?: any
 }
 
-const { title, id, container = true, className } = Astro.props
+const { title, id, container = true, className, icon: IconComponent } = Astro.props
 ---
 
-<section id={id} data-section={id} class=`mx-40 my-0 box-border h-[96vh] min-h-fit ${className}`>
-	{title && <h2 class=" text-center text-5xl">{title}</h2>}
+<section
+	id={id}
+	data-section={id}
+	class=`section ${className} container mx-auto w-full scroll-m-20 md:max-w-2xl lg:max-w-4xl pb-36`
+>
+	{
+		title && (
+			<h2 class="mb-6 flex items-center justify-center gap-x-8 text-5xl font-semibold text-black/80 dark:text-white">
+				{IconComponent && <IconComponent class="size-10" />}
+				{title}
+			</h2>
+		)
+	}
 	<div class="container mx-auto flex h-2/4 gap-16">
 		<slot />
 	</div>
