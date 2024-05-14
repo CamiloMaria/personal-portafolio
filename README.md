@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# Personal Portafolio
 
 Schema del JSON CV basado en:
 https://jsonresume.org/schema/
